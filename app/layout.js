@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/next'; // Analytics component from Vercel
+
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,6 +25,9 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        {/* Calling the analytics component */}
+        <Analytics />
       </body>
     </html>
   );
