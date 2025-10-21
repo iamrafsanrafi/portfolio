@@ -45,7 +45,7 @@ const AboutMe = () => {
                     </div>
 
                     <div className="relative">
-                        <img className="w-[320px] rounded-[3px] grayscale transition-all duration-1000 hover:grayscale-0 absolute top-0 right-5" src="/assets/images/about_me.jpg" alt="Profile Picture" loading="lazy" />
+                        <img className="w-[320px] rounded-[3px] grayscale transition-all duration-1000 hover:grayscale-0 absolute top-0 right-5" src="/assets/images/Rafsan Rafi.jpg" alt="Image of — Rafsan Rafi | iamrafsanrafi | hm.rafsanrafi" loading="lazy" />
 
                         <div className="w-[320px] h-[320px] rounded-[3px] border-2 border-[#00cf5d] mt-5"></div>
                     </div>
