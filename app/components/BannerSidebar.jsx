@@ -5,9 +5,9 @@ import LinkedInIcon from "../icons/LinkedInIcon"
 import MediumIcon from "../icons/MediumIcon"
 import FacebookIcon from "../icons/FacebookIcon"
 
-const Sidebar = ({ value }) => {
+const BannerSidebar = ({ value }) => {
     return (
-        <aside className="flex gap-[64px] items-center -rotate-90 absolute top-[373px] left-[-78px]">
+        <div className="flex gap-[64px] items-center -rotate-90 fixed top-1/2 left-[-9%] xl:left-[-5%]">
             {/* ----Sidebar tag---- */}
             <div className="relative inline-block uppercase text-[#ffffffd9] bg-[#1d293a] font-black py-[4px] px-[10px] rounded-[4px] text-lg select-none
   after:content-[''] after:absolute after:bg-white after:w-[50px] after:h-[2px] after:top-1/2 after:-translate-y-1/2 after:right-[-50px]">
@@ -42,10 +42,8 @@ const Sidebar = ({ value }) => {
                     </Link>
                 </li>
             </ul>
-
-
-        </aside>
+        </div>
     )
 }
 
-export default Sidebar
+export default BannerSidebar
