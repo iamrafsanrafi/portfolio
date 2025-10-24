@@ -1,6 +1,7 @@
 import AboutMe from "./components/AboutMe";
 import Banner from "./components/Banner";
 import Header from "./components/Header";
+import MyWishlist from "./components/MyWishlist";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Banner />
         <AboutMe />
+        <MyWishlist />
       </main>
     </>
   );
