@@ -27,12 +27,12 @@ const AboutMe = () => {
 
                         <ul className="flex justify-between">
                             {skills.map((skill, index) => (
-                                <div 
+                                <div
                                     key={index}
                                     className="flex flex-col"
                                 >
                                     {skill.map((s, i) => (
-                                        <li 
+                                        <li
                                             key={i}
                                             className="text-base leading-[36px] text-[#ffffffd9] pl-5 relative before:absolute before:content-['▹'] before:top-[49.7%] before:left-0 before:-translate-y-1/2 before:text-base before:text-[#00cf5d]"
                                         >
@@ -45,7 +45,9 @@ const AboutMe = () => {
                     </div>
 
                     <div className="relative">
-                        <img className="w-[320px] rounded-[3px] grayscale transition-all duration-1000 hover:grayscale-0 absolute top-0 right-5" src="/assets/images/Rafsan Rafi.jpg" alt="Image of — Rafsan Rafi | iamrafsanrafi | hm.rafsanrafi" loading="lazy" />
+                        <a href="https://github.com/iamrafsanrafi" target="_blank">
+                            <img className="w-[320px] rounded-[3px] grayscale transition-all duration-1000 hover:grayscale-0 absolute top-0 right-5" src="/assets/images/Rafsan Rafi.jpg" alt="Image of — Rafsan Rafi | iamrafsanrafi | hm.rafsanrafi" loading="lazy" />
+                        </a>
 
                         <div className="w-[320px] h-[320px] rounded-[3px] border-2 border-[#00cf5d] mt-5"></div>
                     </div>
