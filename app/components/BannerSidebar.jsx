@@ -16,27 +16,27 @@ const BannerSidebar = ({ value }) => {
 
             {/* ----Icons---- */}
             <ul className="text-[#ffffffd9] p-[5px] flex flex-row-reverse gap-[18px]">
-                <li className="rotate-90">
+                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
                     <Link href="https://github.com/iamrafsanrafi" target="_blank">
                         <GitHubIcon />
                     </Link>
                 </li>
-                <li className="rotate-90">
+                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
                     <Link href="#" target="_blank">
                         <CodePenIcon />
                     </Link>
                 </li>
-                <li className="rotate-90">
+                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
                     <Link href="#" target="_blank">
                         <LinkedInIcon />
                     </Link>
                 </li>
-                <li className="rotate-90">
+                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
                     <Link href="#" target="_blank">
                         <MediumIcon />
                     </Link>
                 </li>
-                <li className="rotate-90">
+                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
                     <Link href="https://www.facebook.com/iamrafsanrafi" target="_blank">
                         <FacebookIcon />
                     </Link>
