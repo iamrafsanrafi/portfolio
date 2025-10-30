@@ -28,6 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
         {/* JSON-LD structured data */}
         <script
           type="application/ld+json"
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+      </head>
       <body
         className={`antialiased bg-[#111a28] ${montserrat.className}`}
       >
