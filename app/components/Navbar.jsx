@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react";
 import Container from "./Container";
+import { navOptions } from "@/constants/data";
 
 const Navbar = () => {
     // States
@@ -23,11 +24,11 @@ const Navbar = () => {
         const position = sectionTop - navbarHeight;
         const scrollingDown = position > window.scrollY;
 
-        if(scrollingDown) {
-            window.scrollTo({top: position + 100, behavior: "smooth"});
+        if (scrollingDown) {
+            window.scrollTo({ top: position + 100, behavior: "smooth" });
         }
         else {
-            window.scrollTo({top: position, behavior: "smooth"});
+            window.scrollTo({ top: position, behavior: "smooth" });
         }
     }
 
@@ -61,7 +62,7 @@ const Navbar = () => {
             prevScrollValue.current = currentScroll;
         }
 
-        if(window.scrollY > 0) {
+        if (window.scrollY > 0) {
             setIsNavSticky(true);
         }
 
@@ -72,7 +73,7 @@ const Navbar = () => {
 
 
     return (
-        <div id="navbar" className={`transition-all duration-400 ease fixed top-0 left-0 z-100 w-full ${(isNavSticky && !hideStickyNav) ? "bg-[#1d293a] mt-0" : "mt-[5px]"} ${hideStickyNav && "-translate-y-[100%]"} `}>
+        <div id="navbar" className={`transition-all duration-400 ease fixed top-0 left-0 z-100 w-full ${(isNavSticky && !hideStickyNav) ? "bg-[#1d293a] mt-0" : "mt-[5px]"} ${hideStickyNav && "-translate-y-[100%]"} hidden md:block`}>
             <Container>
                 <nav className={`flex items-center justify-between px-[25px] py-5 `}>
                     {/* ----Website logo---- */}
@@ -82,18 +83,15 @@ const Navbar = () => {
 
                     {/* ----Nav options---- */}
                     <ul className="uppercase flex text-base gap-x-[32px] text-[#ffffffd9] leading-[26px]">
-                        <li className="cursor-pointer hover:text-[#00cf5d] transition duration-100" onClick={() => handleNavClick("about")}>
-                            About
-                        </li>
-                        <li className="cursor-pointer hover:text-[#00cf5d] transition duration-100" onClick={() => handleNavClick("portfolio")}>
-                            Portfolio
-                        </li>
-                        <li className="cursor-pointer hover:text-[#00cf5d] transition duration-100" onClick={() => handleNavClick("blog")}>
-                            Blog
-                        </li>
-                        <li className="cursor-pointer hover:text-[#00cf5d] transition duration-100" onClick={() => handleNavClick("contact")}>
-                            Contact
-                        </li>
+                        {navOptions.map((option) => (
+                            <li 
+                                key={option.id}
+                                className="cursor-pointer hover:text-[#00cf5d] transition duration-100" onClick={() => handleNavClick(option.id)}
+                            >
+                                {option.name}
+                            </li>
+                        ))}
+
                         <li>
                             <a href="/assets/resume/Resume_of_Rafsan_Rafi.pdf" target="_blank" className="border-2 border-[#00cf5d] px-[15px] py-[8.5px] rounded-[4px] hover:bg-[#00cf5d]/10">
                                 Resume
