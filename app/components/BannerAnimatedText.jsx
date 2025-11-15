@@ -31,7 +31,7 @@ const BannerAnimatedText = () => {
     }, [text, isWriting])
 
     return (
-        <h4 className="text-[#00cf5d] text-[25px] font-bold leading-[27px] relative after:content-[''] after:absolute after:w-[4px] after:h-[100%] after:bg-[#00cf5d] after:top-0">I love&nbsp;{text}</h4>
+        <h4 id="animated-text" className="text-xl text-[#00cf5d] font-bold leading-[22px] sm:text-[22px] sm:leading-6 md:text-[25px] md:leading-[27px] relative after:content-[''] after:absolute after:w-[4px] after:h-[100%] after:bg-[#00cf5d] after:top-0">I love&nbsp;{text}</h4>
     )
 }
 

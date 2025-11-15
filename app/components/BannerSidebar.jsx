@@ -1,46 +1,26 @@
-import Link from "next/link"
-import GitHubIcon from "../icons/GitHubIcon"
-import CodePenIcon from "../icons/CodePenIcon"
-import LinkedInIcon from "../icons/LinkedInIcon"
-import MediumIcon from "../icons/MediumIcon"
-import FacebookIcon from "../icons/FacebookIcon"
+import { socialIcons } from "@/constants/data"
 
-const BannerSidebar = ({ value }) => {
+const BannerSidebar = () => {
     return (
-        <div className="flex gap-[64px] items-center -rotate-90 fixed top-1/2 left-[-9%] xl:left-[-5%]">
+        <div className="banner-sidebar hidden md:flex gap-[64px] items-center">
             {/* ----Sidebar tag---- */}
             <div className="relative inline-block uppercase text-[#ffffffd9] bg-[#1d293a] font-black py-[4px] px-[10px] rounded-[4px] text-lg select-none
-  after:content-[''] after:absolute after:bg-white after:w-[50px] after:h-[2px] after:top-1/2 after:-translate-y-1/2 after:right-[-50px]">
-                <span className="cursor-text">{value}</span>
+  after:content-[''] after:absolute after:bg-[#ffffffd9] after:w-[50px] after:h-[2px] after:top-1/2 after:-translate-y-1/2 after:right-[-50px]">
+                <span className="cursor-text">Follow Me</span>
             </div>
 
             {/* ----Icons---- */}
-            <ul className="text-[#ffffffd9] p-[5px] flex flex-row-reverse gap-[18px]">
-                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
-                    <Link href="https://github.com/iamrafsanrafi" target="_blank">
-                        <GitHubIcon />
-                    </Link>
-                </li>
-                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
-                    <Link href="#" target="_blank">
-                        <CodePenIcon />
-                    </Link>
-                </li>
-                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
-                    <Link href="#" target="_blank">
-                        <LinkedInIcon />
-                    </Link>
-                </li>
-                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
-                    <Link href="#" target="_blank">
-                        <MediumIcon />
-                    </Link>
-                </li>
-                <li className="rotate-90 hover:text-[#00cf5d] transition duration-100">
-                    <Link href="https://www.facebook.com/iamrafsanrafi" target="_blank">
-                        <FacebookIcon />
-                    </Link>
-                </li>
+            <ul className="icons-wrapper text-[#ffffffd9] p-[5px] flex gap-[18px]">
+                {socialIcons.map(icon => (
+                    <li 
+                        key={icon.id}
+                        className="icon hover:text-[#00cf5d] transition duration-100"
+                    >
+                        <a href={icon.url} target="_blank">
+                            <icon.icon />
+                        </a>
+                    </li>
+                ))}
             </ul>
         </div>
     )

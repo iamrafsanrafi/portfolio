@@ -12,3 +12,53 @@ body {
 ::selection { 
   background: #1d293a;
 }
+
+/* ---- Banner Animated Text Responsiveness ---- */
+@media screen and (max-width: 340px) {
+  #animated-text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+/* ---- Banner Sidebar Responsiveness ---- */
+@media screen and (max-width: 1384px) {
+  .banner-sidebar {
+    margin-top: 25px;
+    max-height: 36px;
+  }
+
+  .banner-sidebar .icons-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1385px) and (max-width: 1466px) {
+  .banner-sidebar {
+    position: fixed;
+    top: 50%;
+    left: -8.25%;
+    transform: rotate(-90deg);
+  }
+  .banner-sidebar .icon {
+    transform: rotate(90deg);
+  }
+  .banner-sidebar .icons-wrapper {
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1467px) {
+  .banner-sidebar {
+    position: fixed;
+    top: 50%;
+    left: -5%;
+    transform: rotate(-90deg);
+  }
+  .banner-sidebar .icon {
+    transform: rotate(90deg);
+  }
+  .banner-sidebar .icons-wrapper {
+    flex-direction: row-reverse;
+  }
+}
